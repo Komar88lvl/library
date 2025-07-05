@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     "book",
 ]
 
+AUTH_USER_MODEL = "user.User"
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "debug_toolbar.middleware.DebugToolbarMiddleware",
