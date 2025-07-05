@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "debug_toolbar",
     "rest_framework",
     "book",
+    "user",
 ]
 
 AUTH_USER_MODEL = "user.User"
