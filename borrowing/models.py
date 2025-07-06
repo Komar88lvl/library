@@ -20,7 +20,7 @@ class Borrowing(models.Model):
     )
 
     class Meta:
-        ordering = ["-borrowing_date"]
+        ordering = ["-borrow_date"]
 
     def __str__(self):
         return (f"{self.user.first_name} {self.user.last_name} "
