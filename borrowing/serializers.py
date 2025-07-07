@@ -4,7 +4,7 @@ from borrowing.models import Borrowing
 
 
 class BorrowingSerializer(serializers.ModelSerializer):
-    book = serializers.StringRelatedField(read_only=True, many=True)
+    book = serializers.StringRelatedField(read_only=True)
     user = serializers.StringRelatedField(read_only=True)
 
     class Meta:
