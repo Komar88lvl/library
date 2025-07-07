@@ -4,7 +4,8 @@ from rest_framework_simplejwt.authentication import JWTAuthentication
 from borrowing.models import Borrowing
 from borrowing.serializers import (
     BorrowingListSerializer,
-    BorrowingRetrieveSerializer
+    BorrowingRetrieveSerializer,
+    BorrowingCreateSerializer
 )
 
 
@@ -17,6 +18,12 @@ class BorrowingViewSet(viewsets.ModelViewSet):
     def get_serializer_class(self):
         if self.action == "list":
             return BorrowingListSerializer
-        elif self.action == "retrieve":
+        if self.action == "retrieve":
             return BorrowingRetrieveSerializer
+        if self.action == "create":
+            return BorrowingCreateSerializer
+
         return BorrowingListSerializer
+
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
