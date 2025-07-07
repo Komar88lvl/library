@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "book",
     "user",
+    "borrowing",
 ]
 
 AUTH_USER_MODEL = "user.User"
