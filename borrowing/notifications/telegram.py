@@ -14,5 +14,6 @@ def send_telegram_notifications(message: str):
         "text": message,
         "parse_mode": "Markdown"
     }
+
     response = requests.post(url, data=payload)
     response.raise_for_status()
