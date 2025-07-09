@@ -11,7 +11,6 @@ from borrowing.models import Borrowing
 BORROWING_URL = reverse("borrowing:borrowing-list")
 
 
-
 class UnauthenticatedBorrowingTests(TestCase):
     def setUp(self):
         self.client = APIClient()
